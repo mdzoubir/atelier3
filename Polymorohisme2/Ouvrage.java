@@ -1,19 +1,17 @@
 package Polymorohisme2;
 
+
 public abstract class Ouvrage {
 	private String titre;
-	private String dateCreation;
+	private String  dateCreation;
 	private boolean ouvrageDisponible;
 	
 	
-	public Ouvrage(String titre, String dateCreation, boolean ouvrageDisponible) {
+	public Ouvrage(String titre, String dateCreation) {
 		super();
 		this.titre = titre;
 		this.dateCreation = dateCreation;
-		this.ouvrageDisponible = ouvrageDisponible;
 	}
-
-	
 
 	public String getTitre() {
 		return titre;

@@ -1,6 +1,10 @@
 package Polymorohisme2;
 
-public class Abonne {
+public class Abonne extends Ouvrage{
+	public Abonne(String titre, String dateCreation) {
+		super(titre, dateCreation);
+		// TODO Auto-generated constructor stub
+	}
 	private int id;
 	private String nom;
 	private int numeroAbonne;
@@ -28,6 +32,11 @@ public class Abonne {
 	}
 	public void setOuvBib(String ouvBib) {
 		this.ouvBib = ouvBib;
+	}
+	@Override
+	public void afficher() {
+		// TODO Auto-generated method stub
+		
 	}
 	
 	

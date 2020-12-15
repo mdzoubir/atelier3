@@ -1,24 +1,46 @@
 package Polymorohisme2;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 
-public class Bibliotheque{
 
-	HashMap<String, ArrayList<String>> addOvrage= new  HashMap<String, ArrayList<String>>();
-	public void ajouterOvrage(){
-		
+public class Bibliotheque {
+	
+	HashMap<String, Ouvrage> listOuvrage = new HashMap<String, Ouvrage>();
+	HashMap<String, Abonne> listAbonne = new HashMap<String, Abonne>();
+	
+	
+	void ajouterOuvrage(Ouvrage titre){
+			if(!listOuvrage.containsKey(titre.getTitre())){
+				listOuvrage.put(titre.getTitre(), titre);
+			}else{
+				System.out.println("ouvrage is aready exist");
+			}
 	}
 	
-	public void geterOvrage(String titre){
-		System.out.println(addOvrage.get(titre));
-	}
-	public void ajouterAbonne(String abonne){
+	public Ouvrage getOuvrage(String titre){
+		return listOuvrage.get(titre);
 	}
 	
-	public void getAbonne(int id){
-	}
+	void ajouterAbonne(Abonne nom){
+		if (!listAbonne.containsKey(nom.getNom())) {
+			listAbonne.put(nom.getNom(), nom);
+		}else System.out.println("abonne already exist");
+	}	
 
+	Abonne getAbonne(int id){
+		for (int i=0; i<listAbonne.size(); i++ ) {
+			if(listAbonne.get(i).getId() == id){
+				return listAbonne.get(i);
+			}
+		}
+		return null;
+	}
 	
-		
+	
+	
+	
+	
+	
+	
+	
 }

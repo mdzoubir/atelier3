@@ -1,25 +1,21 @@
 package Polymorohisme2;
 
-public class Abonne extends Ouvrage{
-	public Abonne(String titre, String dateCreation) {
-		super(titre, dateCreation);
-		// TODO Auto-generated constructor stub
-	}
-	private int id;
+public class Abonne {
 	private String nom;
+	private int id;
 	private int numeroAbonne;
-	private String ouvBib;
-	public int getId() {
-		return id;
-	}
-	public void setId(int id) {
-		this.id = id;
-	}
+	private boolean seulOuvrage;
 	public String getNom() {
 		return nom;
 	}
 	public void setNom(String nom) {
 		this.nom = nom;
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
 	}
 	public int getNumeroAbonne() {
 		return numeroAbonne;
@@ -27,18 +23,26 @@ public class Abonne extends Ouvrage{
 	public void setNumeroAbonne(int numeroAbonne) {
 		this.numeroAbonne = numeroAbonne;
 	}
-	public String getOuvBib() {
-		return ouvBib;
+	public boolean isSeulOuvrage() {
+		return seulOuvrage;
 	}
-	public void setOuvBib(String ouvBib) {
-		this.ouvBib = ouvBib;
+	public void setSeulOuvrage(boolean seulOuvrage) {
+		this.seulOuvrage = seulOuvrage;
 	}
-	@Override
-	public void afficher() {
-		// TODO Auto-generated method stub
-		
+	public Abonne(String nom, int id, int numeroAbonne) {
+		super();
+		this.nom = nom;
+		this.id = id;
+		this.numeroAbonne = numeroAbonne;
 	}
 	
+	
+	
+	
+	
+	void afficher(){
+		System.out.println("nom : "+ nom + " id : " + id + " numero de abonne : " + numeroAbonne);
+	}
 	
 	
 	

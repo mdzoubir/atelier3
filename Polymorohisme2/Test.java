@@ -1,34 +1,44 @@
 package Polymorohisme2;
 
-import java.util.ArrayList;
-
 public class Test {
 	public static void main(String[] args) {
+		Ouvrage ouvrage1 = new Ouvrage("son", "2010/09/07");
+		Livre livr1 = new Livre("kan", "2019/08/22", "maik");
+		Video video1 = new Video("bik", "2018", "bil", 120) ;
 		
-		//Livre
-		Livre a = new  Livre("dark", "2009/09/07", "sion bile");
-		ArrayList<Livre> tableLivre = new ArrayList<Livre>();
-		tableLivre.add(a);
+		Abonne user1 = new  Abonne("younnes", 1, 110);
 		
-		for (int i = 0; i < tableLivre.size(); i++) {
-			tableLivre.get(i).afficher();
-		}
-		//
+		//livr1.afficher();
+		//video1.afficher();
 		
 		
-		//Video
-		Video b = new Video("Maek", "2020/09/12", "Sob", 120);
-		ArrayList<Video> tableVideo = new ArrayList<Video>();
-		tableVideo.add(b);
+		Bibliotheque bi1 = new Bibliotheque();
+		bi1.ajouterOuvrage(ouvrage1);
+		bi1.ajouterOuvrage(livr1);
 		
-		for (int i = 0; i < tableVideo.size(); i++) {
-			tableVideo.get(i).afficher();
-		}
-		//
+		bi1.getOuvrage("son").afficher();
+		bi1.getOuvrage("kan").afficher();
 		
-		//bibl
-		Bibliotheque c = new Bibliotheque();
-		c.geterOvrage("tableVideo");
+		
+		
+		bi1.ajouterAbonne(user1);
+		
+		Abonne r = bi1.getAbonne(user1.getId());
+		//System.out.println(user1.getId());
+		//System.out.println(r);
+		
+		r.afficher();
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 	}
 }
